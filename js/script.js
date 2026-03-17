@@ -8,7 +8,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
+// slider functionality
 let slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
 
