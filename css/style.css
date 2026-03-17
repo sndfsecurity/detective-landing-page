@@ -397,6 +397,26 @@ body {
     line-height: 1.6;
 }
 
+.services-cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #c6a34e;
+  color: #0a0c0f;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta-btn:hover {
+  background: #dbb86a;
+}
+
 /* Why Choose Us */
 .why-choose {
     padding: 6rem 5%;

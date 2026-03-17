@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="rating">
-                        ⭐⭐⭐⭐⭐ <span>4.8/5</span> Trusted by 3500+ Clients
+                        ⭐⭐⭐⭐⭐ <span>4.9/5</span> Trusted by 3500+ Clients
                     </div>
                 </div>
 
@@ -86,6 +86,7 @@
         <!-- Services Section -->
         <section id="services" class="services">
             <h2 class="section-title">Our Services</h2>
+            
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🔎</div>
@@ -130,6 +131,12 @@
                     <p>Discreet partner surveillance, Evidence collection, Confidential reporting.</p>
                 </div>
 
+            </div>
+            <div class="services-cta">
+                <h3>Need Help with Your Case?</h3>
+                <p>Choose the right investigation service based on your needs.</p>
+                
+                <a href="#contact" class="cta-btn">Talk to an Investigator</a>
             </div>
         </section>
 
@@ -231,9 +238,11 @@
                     <form id="contactForm" class="contact-form" action="https://formsubmit.co/ajax/detectiveenquiry@gmail.com" method="POST">
                     <!-- Name and Mobile in one row - Both Required -->
                     <div class="form-row">
+                        
                         <div class="form-group">
                             <label for="name">Full Name <span class="required-star">*</span></label>
-                            <input type="text" id="name" name="Full Name" placeholder="Enter your full name" required>
+                            <input type="text" id="name"  name="Full Name" placeholder="Enter your full name" 
+                            oninput="this.value = this.value.replace(/[^A-Za-z ]/g, '')" required>
                         </div>
                         
                         <div class="form-group">
@@ -277,7 +286,7 @@
 </p>
                     <!-- Submit Button -->
                     <div class="contact-buttons">
-                        <button type="submit" class="btn-primary" style="width: 100%;">Request Confidential Call</button>
+                        <button type="submit" class="btn-primary" style="width: 100%;">Submit Your Request</button>
                     </div>
 
                     
