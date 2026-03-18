@@ -47,12 +47,7 @@ if (phoneInput) {
     });
 }
 
-document.getElementById("contactForm").addEventListener("submit", function () {
-    document.getElementById("timeIST").value = new Date().toLocaleString("en-IN", {
-        timeZone: "Asia/Kolkata",
-        hour12: true
-    });
-});
+document.getElementById("localTime").value = new Date().toLocaleString();
 
 // Image lazy loading
 if ('loading' in HTMLImageElement.prototype) {
