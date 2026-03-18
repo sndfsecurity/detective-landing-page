@@ -47,7 +47,26 @@ if (phoneInput) {
     });
 }
 
-document.getElementById("localTime").value = new Date().toLocaleString();
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function () {
+        const now = new Date();
+
+        const istTime = now.toLocaleString("en-IN", {
+            timeZone: "Asia/Kolkata",
+            year: "numeric",
+            month: "short",
+            day: "2-digit",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true
+        });
+
+        document.getElementById("timeIST").value = istTime + " (IST)";
+    });
+});
 
 // Image lazy loading
 if ('loading' in HTMLImageElement.prototype) {
