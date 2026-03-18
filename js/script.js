@@ -47,6 +47,10 @@ if (phoneInput) {
     });
 }
 
+document.getElementById("timeIST").value = new Date().toLocaleString("en-IN", {
+    timeZone: "Asia/Kolkata"
+});
+
 // Contact Form Submission (NO REDIRECT)
 // const contactForm = document.getElementById('contactForm');
 
