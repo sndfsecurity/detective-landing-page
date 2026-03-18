@@ -48,34 +48,34 @@ if (phoneInput) {
 }
 
 // Contact Form Submission (NO REDIRECT)
-const contactForm = document.getElementById('contactForm');
+// const contactForm = document.getElementById('contactForm');
 
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+// if (contactForm) {
+//     contactForm.addEventListener('submit', function(e) {
+//         e.preventDefault();
 
-        const formData = new FormData(contactForm);
+//         const formData = new FormData(contactForm);
 
-        fetch(contactForm.action, {
-            method: "POST",
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                document.getElementById('successMessage').style.display = 'block';
-                contactForm.reset();
-            } else {
-                alert("Something went wrong!");
-            }
-        })
-        .catch(error => {
-            alert("Error submitting form");
-        });
-    });
-}
+//         fetch(contactForm.action, {
+//             method: "POST",
+//             body: formData,
+//             headers: {
+//                 'Accept': 'application/json'
+//             }
+//         })
+//         .then(response => {
+//             if (response.ok) {
+//                 document.getElementById('successMessage').style.display = 'block';
+//                 contactForm.reset();
+//             } else {
+//                 alert("Something went wrong!");
+//             }
+//         })
+//         .catch(error => {
+//             alert("Error submitting form");
+//         });
+//     });
+// }
 
 
 // Image lazy loading
