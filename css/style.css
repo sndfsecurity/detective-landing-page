@@ -510,7 +510,25 @@ body {
 
 .process-step p {
     color: #9ca3af;
+    text-align: center;
 }
+
+.process-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.step::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: #c9a34e;
+  top: 30px;
+  right: -50px;
+}
+
+
 
 /* Trust Signals */
 .trust-section {
