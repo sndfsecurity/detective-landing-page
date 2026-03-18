@@ -47,40 +47,12 @@ if (phoneInput) {
     });
 }
 
-document.getElementById("timeIST").value = new Date().toLocaleString("en-IN", {
-    timeZone: "Asia/Kolkata"
+document.getElementById("contactForm").addEventListener("submit", function () {
+    document.getElementById("timeIST").value = new Date().toLocaleString("en-IN", {
+        timeZone: "Asia/Kolkata",
+        hour12: true
+    });
 });
-
-// Contact Form Submission (NO REDIRECT)
-// const contactForm = document.getElementById('contactForm');
-
-// if (contactForm) {
-//     contactForm.addEventListener('submit', function(e) {
-//         e.preventDefault();
-
-//         const formData = new FormData(contactForm);
-
-//         fetch(contactForm.action, {
-//             method: "POST",
-//             body: formData,
-//             headers: {
-//                 'Accept': 'application/json'
-//             }
-//         })
-//         .then(response => {
-//             if (response.ok) {
-//                 document.getElementById('successMessage').style.display = 'block';
-//                 contactForm.reset();
-//             } else {
-//                 alert("Something went wrong!");
-//             }
-//         })
-//         .catch(error => {
-//             alert("Error submitting form");
-//         });
-//     });
-// }
-
 
 // Image lazy loading
 if ('loading' in HTMLImageElement.prototype) {
