@@ -47,7 +47,6 @@ if (phoneInput) {
     });
 }
 
-document.getElementById("localTime").value = new Date().toLocaleString();
 
 // Image lazy loading
 if ('loading' in HTMLImageElement.prototype) {
