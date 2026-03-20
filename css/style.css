@@ -334,14 +334,14 @@ body {
 
 /* Services Section */
 .services {
-    padding: 6rem 5%;
+    padding: 4rem 5%;
     background: #0f1217;
 }
 
 .section-title {
     font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     color: #fff;
     position: relative;
 }
@@ -362,7 +362,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: stretch; 
 }
 
@@ -407,7 +407,7 @@ body {
 
 .services-cta {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .cta-btn {
@@ -427,7 +427,7 @@ body {
 
 /* Why Choose Us */
 .why-choose {
-    padding: 6rem 5%;
+     padding: 4rem 5%;
     background: linear-gradient(135deg, #0a0c0f 0%, #1a1e24 100%);
 }
 
@@ -436,7 +436,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .feature {
@@ -473,7 +473,7 @@ body {
 
 /* Process Section */
 .process {
-    padding: 6rem 5%;
+    padding: 4rem 5%;
     background: #0f1217;
 }
 
@@ -482,7 +482,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     position: relative;
 }
 
@@ -540,7 +540,7 @@ body {
 
 /* Trust Signals */
 .trust-section {
-    padding: 6rem 5%;
+    padding: 4rem 5%;
     background: linear-gradient(135deg, #0a0c0f 0%, #1a1e24 100%);
 }
 
@@ -605,7 +605,7 @@ body {
 
 /* Contact Section - Simple Dropdown */
 .contact {
-    padding: 6rem 5%;
+    padding: 4rem 5%;
     background: #0f1217;
 }
 
@@ -613,7 +613,7 @@ body {
     max-width: 900px;
     margin: 0 auto;
     background: #1a1e24;
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 20px;
     border: 1px solid #2a2f38;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -780,6 +780,7 @@ body {
     color: #aaa;
     margin-top: 10px;
     text-align: center;
+   
 }
 
 
@@ -978,6 +979,28 @@ body {
     .contact-buttons {
         flex-direction: column;
     }
+
+    .services,
+    .why-choose,
+    .process,
+    .contact {
+        padding: 2.5rem 5%;  /* compact for mobile */
+    }
+
+     .section-title {
+        margin-bottom: 1.5rem;
+    }
+
+    .services-grid,
+    .features-grid,
+    .process-steps {
+        gap: 1.2rem;
+    }
+
+    .services-cta {
+        margin-top: 20px;
+    }
+
 }
 
 @media (max-width: 480px) {
