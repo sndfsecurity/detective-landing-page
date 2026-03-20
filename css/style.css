@@ -363,6 +363,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    align-items: stretch; 
 }
 
 .service-card {
@@ -371,6 +372,11 @@ body {
     border-radius: 8px;
     border: 1px solid #2a2f38;
     transition: all 0.3s;
+
+    display: flex;              /* 🔥 important */
+    flex-direction: column;     /* 🔥 important */
+    justify-content: space-between; /* 🔥 makes spacing equal */
+    height: 100%;               
 }
 
 .service-card:hover {
@@ -390,11 +396,13 @@ body {
     margin-bottom: 1rem;
     font-size: 1.3rem;
     text-align: center;
+     text-align: center; 
 }
 
 .service-card p {
     color: #9ca3af;
     line-height: 1.6;
+     text-align: center; 
 }
 
 .services-cta {
