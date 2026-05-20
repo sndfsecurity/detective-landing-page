@@ -415,8 +415,8 @@ document
         service:
             document.getElementById("service").value,
 
-        sourceWebsite:
-            window.location.hostname,
+       sourceWebsite:
+       window.location.hostname.replace("www.", ""),
 
         status:
             "NEW"
