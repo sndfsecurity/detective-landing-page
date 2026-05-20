@@ -263,8 +263,10 @@ Best detective agency in pune">
                 <p style="text-align: center; color: #d1d5db;; margin-bottom: 2rem;">We'll respond within 30 minutes. 100% confidential.</p>
                 
                 <!-- <form id="contactForm" class="contact-form"> -->
-                    <form id="contactForm" class="contact-form" action="https://formsubmit.co/detectiveenquiry@gmail.com" method="POST">
+                <!-- <form id="contactForm" class="contact-form"  method="POST"> -->
                     <!-- Name and Mobile in one row - Both Required -->
+
+                <form id="contactForm" class="contact-form">
                     <div class="form-row">
 
                         <div class="form-group">
@@ -312,15 +314,7 @@ Best detective agency in pune">
                 
                 </div>
 
-                    <!-- WhatsApp and Call Buttons -->
-                    <!-- <div class="contact-buttons">
-                        <a href="https://wa.me/+918007341905" class="btn-whatsapp" target="_blank">
-                            <span>📱</span>Chat on WhatsApp Instantly
-                        </a>
-                        <a href="tel:+8007341905" class="btn-call">
-                            <span>📞</span> Call Now
-                        </a>
-                    </div> -->
+                
 
                    <input type="hidden" name="_subject" value="🚨 New Detective Enquiry">
 
@@ -399,6 +393,67 @@ Best detective agency in pune">
    "addressCountry": "India"
  }
 }
+</script>
+
+
+<script>
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const data = {
+
+        fullName:
+            document.getElementById("name").value,
+
+        mobileNumber:
+            document.getElementById("phone").value,
+
+        service:
+            document.getElementById("service").value,
+
+        sourceWebsite:
+            window.location.hostname,
+
+        status:
+            "NEW"
+    };
+
+    try {
+
+        const response = await fetch(
+            "http://localhost:8080/api/enquiry",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify(data)
+            }
+        );
+
+        if(response.ok) {
+
+            alert("Enquiry Submitted Successfully");
+
+            window.location.href =
+                "thankyou.html";
+        }
+
+    } catch(error) {
+
+        console.log(error);
+
+        alert("Something went wrong");
+    }
+
+});
+
 </script>
 
 </body>
