@@ -427,6 +427,13 @@ document
             "NEW"
     };
 
+    const submitBtn =
+            document.querySelector(
+            '#contactForm button[type="submit"]');
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Submitting...";
+
     try {
 
 
@@ -456,13 +463,19 @@ document
                     await response.text();
 
                 alert(errorMessage);
+
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Submit";
        }
 
     } catch(error) {
 
         console.log(error);
 
-        alert("Something went wrong. Please try again later.");
+       alert("Something went wrong. Please try again later.");
+
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Submit";
     }
 
 });
